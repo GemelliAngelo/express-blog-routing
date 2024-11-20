@@ -35,33 +35,28 @@ const posts = [
 ];
 
 // * INDEX
-
 router.get("/", (req, res) => {
   res.json(posts);
 });
 
 // * SHOW
-
 router.get("/:id", (req, res) => {
   const { id } = req.params;
   res.send(`Mostra post con indice ${id}`);
 });
 
 // * STORE
-
 router.post("/", (req, res) => {
   res.send(`Aggiunta di un post`);
 });
 
 // * UPDATE
-
 router.put("/:id", (req, res) => {
   const { id } = req.params;
   res.send(`Modifica integrale del post con indice ${id}`);
 });
 
 // * MODIFY
-
 router.patch("/:id", (req, res) => {
   const { id } = req.params;
   res.send(`Modifica parziale del post con indice ${id}`);
