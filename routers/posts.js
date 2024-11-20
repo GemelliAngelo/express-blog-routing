@@ -42,7 +42,7 @@ router.get("/", (req, res) => {
 // * SHOW
 router.get("/:id", (req, res) => {
   const { id } = req.params;
-  res.send(`Mostra post con indice ${id}`);
+  res.json(posts[id]);
 });
 
 // * STORE
