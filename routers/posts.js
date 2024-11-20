@@ -60,4 +60,11 @@ router.put("/posts/:id", (req, res) => {
   res.send(`Modifica integrale del post con indice ${id}`);
 });
 
+// * MODIFY
+
+router.patch("/posts/:id", (req, res) => {
+  const { id } = req.params;
+  res.send(`Modifica integrale del post con indice ${id}`);
+});
+
 module.exports = router;
