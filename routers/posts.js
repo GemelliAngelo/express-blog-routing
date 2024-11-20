@@ -36,8 +36,15 @@ const posts = [
 
 // * INDEX
 
-router.get("/bacheca", (req, res) => {
+router.get("/posts", (req, res) => {
   res.json(posts);
+});
+
+// * SHOW
+
+router.get("/posts/:id", (req, res) => {
+  const { id } = req.params;
+  res.send(`Mostra post con indice ${id}`);
 });
 
 module.exports = router;
