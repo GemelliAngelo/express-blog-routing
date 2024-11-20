@@ -36,40 +36,40 @@ const posts = [
 
 // * INDEX
 
-router.get("/posts", (req, res) => {
+router.get("/", (req, res) => {
   res.json(posts);
 });
 
 // * SHOW
 
-router.get("/posts/:id", (req, res) => {
+router.get("/:id", (req, res) => {
   const { id } = req.params;
   res.send(`Mostra post con indice ${id}`);
 });
 
 // * STORE
 
-router.post("/posts", (req, res) => {
-  res.send(`Aggiugni un post`);
+router.post("/", (req, res) => {
+  res.send(`Aggiunta di un post`);
 });
 
 // * UPDATE
 
-router.put("/posts/:id", (req, res) => {
+router.put("/:id", (req, res) => {
   const { id } = req.params;
   res.send(`Modifica integrale del post con indice ${id}`);
 });
 
 // * MODIFY
 
-router.patch("/posts/:id", (req, res) => {
+router.patch("/:id", (req, res) => {
   const { id } = req.params;
   res.send(`Modifica parziale del post con indice ${id}`);
 });
 
 // * DESTROY
 
-router.delete("/posts/:id", (req, res) => {
+router.delete("/:id", (req, res) => {
   const { id } = req.params;
   res.send(`Eliminazione del post con indice ${id}`);
 });
