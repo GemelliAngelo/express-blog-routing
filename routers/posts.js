@@ -41,7 +41,17 @@ router.get("/", (req, res) => {
 
 // * SHOW
 router.get("/:id", (req, res) => {
-  const { id } = req.params;
+  const id = parseInt(req.params.id);
+
+  if (isNaN(id)) {
+    res.status(418).send("id not valid");
+    return;
+  }
+
+  if (id > posts.length - 1) {
+    res.status(404).send("id not found");
+  }
+
   res.json(posts[id]);
 });
 
