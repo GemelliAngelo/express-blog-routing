@@ -49,8 +49,15 @@ router.get("/posts/:id", (req, res) => {
 
 // * STORE
 
-router.get("/posts", (req, res) => {
+router.post("/posts", (req, res) => {
   res.send(`Aggiugni un post`);
+});
+
+// * UPDATE
+
+router.put("/posts/:id", (req, res) => {
+  const { id } = req.params;
+  res.send(`Modifica integrale del post con indice ${id}`);
 });
 
 module.exports = router;
