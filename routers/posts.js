@@ -47,4 +47,10 @@ router.get("/posts/:id", (req, res) => {
   res.send(`Mostra post con indice ${id}`);
 });
 
+// * STORE
+
+router.get("/posts", (req, res) => {
+  res.send(`Aggiugni un post`);
+});
+
 module.exports = router;
