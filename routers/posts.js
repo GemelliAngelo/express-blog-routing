@@ -48,7 +48,7 @@ router.get("/:id", (req, res) => {
     return;
   }
 
-  if (id > posts.length - 1) {
+  if (id > posts.length - 1 || id < 0) {
     res.status(404).send("id not found");
   }
 
